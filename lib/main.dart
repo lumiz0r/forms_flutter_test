@@ -48,7 +48,7 @@ class _HomePage extends StatelessWidget {
             onTap: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (context) => StepperForm(),
+                  builder: (context) => const StepperForm(),
                 ),
               );
             },
@@ -59,7 +59,7 @@ class _HomePage extends StatelessWidget {
             onTap: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (context) => FastForm(),
+                  builder: (context) => const FastForm(),
                 ),
               );
             },
@@ -70,7 +70,7 @@ class _HomePage extends StatelessWidget {
             onTap: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (context) => FinalForm(),
+                  builder: (context) => const FinalForm(),
                 ),
               );
             },

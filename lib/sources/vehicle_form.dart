@@ -63,7 +63,7 @@ class VehicleForm extends StatelessWidget {
               const SizedBox(height: 20.0),
               FormBuilderDropdown(
                 name: 'combo_question',
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'Select Option',
                   border: OutlineInputBorder(
                     borderSide: BorderSide(

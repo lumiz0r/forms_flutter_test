@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 
 class StepperForm extends StatefulWidget {
+  const StepperForm({super.key});
+
   @override
   _StepperFormState createState() => _StepperFormState();
 }
@@ -14,7 +16,7 @@ class _StepperFormState extends State<StepperForm> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Stepper Form'),
+        title: const Text('Stepper Form'),
       ),
       body: FormBuilder(
         key: _formKey,
@@ -39,21 +41,21 @@ class _StepperFormState extends State<StepperForm> {
           },
           steps: [
             Step(
-              title: Text('Personal'),
+              title: const Text('Personal'),
               content: Column(
                 children: [
                   FormBuilderTextField(
                     name: 'name',
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       labelText: 'Name',
                       prefixIcon: Icon(Icons.person_outline),
                       border: OutlineInputBorder(),
                     ),
                   ),
-                  SizedBox(height: 15.0),
+                  const SizedBox(height: 15.0),
                   FormBuilderTextField(
                     name: 'surname',
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       labelText: 'Surname',
                       prefixIcon: Icon(Icons.person_outline),
                       border: OutlineInputBorder(),
@@ -64,30 +66,30 @@ class _StepperFormState extends State<StepperForm> {
               isActive: _currentStep == 0,
             ),
             Step(
-              title: Text('Contact'),
+              title: const Text('Contact'),
               content: Column(
                 children: [
                   FormBuilderTextField(
                     name: 'email',
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       labelText: 'Email',
                       prefixIcon: Icon(Icons.email_outlined),
                       border: OutlineInputBorder(),
                     ),
                   ),
-                  SizedBox(height: 15.0),
+                  const SizedBox(height: 15.0),
                   FormBuilderTextField(
                     name: 'phone',
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       labelText: 'Mobile Phone',
                       prefixIcon: Icon(Icons.mobile_friendly_outlined),
                       border: OutlineInputBorder(),
                     ),
                   ),
-                  SizedBox(height: 15.0),
+                  const SizedBox(height: 15.0),
                   FormBuilderTextField(
                     name: 'address',
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       labelText: 'Address',
                       prefixIcon: Icon(Icons.location_on_outlined),
                       border: OutlineInputBorder(),
@@ -98,12 +100,12 @@ class _StepperFormState extends State<StepperForm> {
               isActive: _currentStep == 1,
             ),
             Step(
-              title: Text('Upload'),
+              title: const Text('Upload'),
               content: Column(
                 children: [
                   FormBuilderDropdown(
                     name: 'gender',
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       labelText: 'Gender',
                       prefixIcon: Icon(Icons.person_outline),
                       border: OutlineInputBorder(),
@@ -118,7 +120,7 @@ class _StepperFormState extends State<StepperForm> {
                   FormBuilderCheckbox(
                     name: 'accept_terms',
                     initialValue: false,
-                    title: Text('I accept the terms and conditions'),
+                    title: const Text('I accept the terms and conditions'),
                   ),
                 ],
               ),

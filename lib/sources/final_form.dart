@@ -3,6 +3,8 @@ import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:intl/intl.dart';
 
 class FinalForm extends StatefulWidget {
+  const FinalForm({super.key});
+
   @override
   _FinalFormState createState() => _FinalFormState();
 }
@@ -14,7 +16,7 @@ class _FinalFormState extends State<FinalForm> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Final Form"),
+        title: const Text("Final Form"),
       ),
       body: Padding(
         padding: const EdgeInsets.all(10.0),
@@ -25,29 +27,29 @@ class _FinalFormState extends State<FinalForm> {
                 key: _fbKey,
                 child: Column(
                   children: [
-                    Text(
+                    const Text(
                       'Form Example Section',
                       style: TextStyle(
                         fontSize: 24.0,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     FormBuilderTextField(
                       name: 'title',
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         labelText: 'Title',
                         border: OutlineInputBorder(
                           borderSide: BorderSide(),
                         ),
                       ),
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     FormBuilderDateTimePicker(
                       name: 'date_picker',
                       inputType: InputType.date,
                       format: DateFormat('EEEE, MMMM d, yyyy'),
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         labelText: 'Date Picker',
                         border: OutlineInputBorder(
                           borderSide: BorderSide(),
@@ -55,13 +57,13 @@ class _FinalFormState extends State<FinalForm> {
                       ),
                       initialDate: DateTime.now(),
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     FormBuilderDateTimePicker(
                       name: 'date_range_picker',
                       firstDate: DateTime(1970),
                       lastDate: DateTime(2100),
                       format: DateFormat('d/MM/yyyy - d/MM/yyyy'),
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         labelText: 'Date Range Picker',
                         border: OutlineInputBorder(
                           borderSide: BorderSide(),
@@ -69,22 +71,22 @@ class _FinalFormState extends State<FinalForm> {
                       ),
                       initialEntryMode: DatePickerEntryMode.calendar,
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     FormBuilderDateTimePicker(
                       name: 'time_picker',
                       inputType: InputType.time,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         labelText: 'Time Picker',
                         border: OutlineInputBorder(
                           borderSide: BorderSide(),
                         ),
                       ),
-                      initialTime: TimeOfDay(hour: 8, minute: 0),
+                      initialTime: const TimeOfDay(hour: 8, minute: 0),
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     FormBuilderFilterChip(
                       name: 'input_chips',
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         labelText: 'Input Chips',
                         border: OutlineInputBorder(
                           borderSide: BorderSide(),
@@ -138,7 +140,7 @@ class _FinalFormState extends State<FinalForm> {
                   ],
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
                   if (_fbKey.currentState!.saveAndValidate()) {
@@ -147,7 +149,7 @@ class _FinalFormState extends State<FinalForm> {
                     print('validation failed');
                   }
                 },
-                child: Text('Submit'),
+                child: const Text('Submit'),
               ),
             ],
           ),
